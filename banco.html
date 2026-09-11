@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Umbral-C — banco</title>
+<style>
+:root{--bg:#0c100e;--fg:#e6eee8;--card:#141a17;--muted:#1c2420;--muted-fg:#8b9890;--border:#2a3530;--ok:#9db8a6;--ask:#c4b8a0;--bad:#c4a0a0;--primary:#c9d4ce}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:1.2rem 1rem 3rem}
+.eyebrow{font:11px/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-fg)}
+h1{font-weight:500;font-size:2rem;margin:.3rem 0 .6rem;letter-spacing:-.03em}
+.lede{color:var(--muted-fg);max-width:44rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem;margin-top:1rem}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:.45rem .5rem;border-bottom:1px solid var(--border)}
+th{font:11px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-fg);font-weight:500}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.bar{height:6px;background:var(--muted);border-radius:99px;overflow:hidden;margin-top:.25rem}
+.bar>i{display:block;height:100%;background:var(--ok)}
+.bar.mid>i{background:var(--ask)}.bar.low>i{background:var(--bad)}
+a{color:var(--primary)}.mono{font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--muted-fg)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="eyebrow">banco de control · mismo percepto · políticas distintas</p>
+<h1>Umbral-C contra ocho políticas</h1>
+<p class="lede">No es un ranking de modelos de lenguaje. Nueve agentes reciben el mismo percepto. El caso que parte al termostato: <em>hazlo mejor → el viernes</em>.</p>
+<p class="mono"><a href="/">ciclo</a> · <a href="/banco.html">banco</a> · <a href="https://github.com/fmarrabal/umbral">código</a></p>
+<section class="card">
+<table>
+<thead><tr><th>Agente</th><th>Política</th><th class="num">Aciertos</th></tr></thead>
+<tbody>
+<tr><td>Umbral-C</td><td class="mono">predicción que muere + compromiso estructural</td><td class="num">43/43<div class="bar"><i style="width:100%"></i></div></td></tr>
+<tr><td>Frame pegajoso</td><td class="mono">el criterio de ayer sigue lleno</td><td class="num">35/43<div class="bar mid"><i style="width:81%"></i></div></td></tr>
+<tr><td>Termostato</td><td class="mono">si hay entidad, úsala</td><td class="num">33/43<div class="bar mid"><i style="width:77%"></i></div></td></tr>
+<tr><td>Workspace GWT</td><td class="mono">la entidad más fuerte manda</td><td class="num">33/43<div class="bar mid"><i style="width:77%"></i></div></td></tr>
+<tr><td>Bayes MAP</td><td class="mono">si hay fecha, MAP = fecha</td><td class="num">32/43<div class="bar mid"><i style="width:74%"></i></div></td></tr>
+<tr><td>N-grama / coseno</td><td class="mono">recupera turnos parecidos</td><td class="num">31/43<div class="bar mid"><i style="width:72%"></i></div></td></tr>
+<tr><td>ReAct / tool</td><td class="mono">cualquier token ocupa el hueco</td><td class="num">31/43<div class="bar mid"><i style="width:72%"></i></div></td></tr>
+<tr><td>Relleno ingenuo</td><td class="mono">el primero que llega cierra</td><td class="num">29/43<div class="bar mid"><i style="width:67%"></i></div></td></tr>
+<tr><td>Asistente servicial</td><td class="mono">siempre cierra</td><td class="num">12/43<div class="bar low"><i style="width:28%"></i></div></td></tr>
+</tbody>
+</table>
+</section>
+</div>
+</body>
+</html>
